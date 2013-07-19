@@ -1,0 +1,10 @@
+Fri, 19 Jul 2013 17:12:54 +0200
+README	Fri, 19 Jul 2013 16:59:21 +0200
+COPYING	Fri, 19 Jul 2013 13:21:35 +0200
+ChangeLog	Fri, 19 Jul 2013 13:21:35 +0200
+lib/ontopia-topicmaps.rb	Fri, 19 Jul 2013 13:31:20 +0200
+lib/ontopia/topicmaps.rb	Fri, 19 Jul 2013 17:06:58 +0200
+lib/ontopia/topicmaps/version.rb	Fri, 19 Jul 2013 17:06:24 +0200
+lib/ontopia/topicmaps/packages.rb	Fri, 19 Jul 2013 17:05:30 +0200
+lib/ontopia/topicmaps/topicmap.rb	Fri, 19 Jul 2013 17:06:20 +0200
+lib/ontopia/topicmaps/stringifiers.rb	Fri, 19 Jul 2013 17:06:13 +0200
