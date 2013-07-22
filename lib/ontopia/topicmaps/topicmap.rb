@@ -68,8 +68,13 @@ select count($TOPIC) from
 
       def query(query = nil, declarations = nil, str = nil)
         str = Topicmaps.stringifier(str || :default)
-        res = query_for_list(query, declarations, &block_given? ?
+
+        query_for_list(query, declarations, &block_given? ?
           lambda { |i,| yield(i, str) } : lambda { |i,| str.to_string(i) }).to_a
+      end
+
+      def query_maps(query = nil, declarations = nil)
+        query_wrapper(declarations).query_for_maps(query_string(query)).to_a
       end
 
       def topics(value_str = nil, key_str = nil)
@@ -93,16 +98,22 @@ select count($TOPIC) from
         raise "Error reading topic map: #{err}"
       end
 
-      def query_for_list(query, declarations, &block)
-        args = [QUERY.has_key?(query ||= :all_topics) ? QUERY[query] :
-          query.is_a?(Symbol) ? raise("No such query: #{query}") : query]
+      def query_string(query)
+        QUERY.has_key?(query ||= :all_topics) ? QUERY[query] :
+          query.is_a?(Symbol) ? raise("No such query: #{query}") : query
+      end
 
-        args << RowMapper.new(&block) if block
-
+      def query_wrapper(declarations = nil)
         qw = QueryWrapper.new(tm)
         qw.set_declarations(declarations) if declarations
+        qw
+      end
 
-        qw.query_for_list(*args)
+      def query_for_list(query, declarations = nil, &block)
+        args = [query_string(query)]
+        args << RowMapper.new(&block) if block
+
+        query_wrapper(declarations).query_for_list(*args)
       rescue OntopiaRuntimeException => err
         raise "Query error: #{err}"
       end
