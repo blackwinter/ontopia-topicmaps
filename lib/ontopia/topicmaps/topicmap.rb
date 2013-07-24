@@ -50,6 +50,16 @@ select count($TOPIC) from
         EOT
       }
 
+      QUERY_PROJECTION_RE = %r{\bselect\s+(.+)\s+from\b}i
+
+      class << self
+
+        def extract_query_projection(query)
+          query[QUERY_PROJECTION_RE, 1].delete('$,').split
+        end
+
+      end
+
       def initialize(file)
         Topicmaps.setup_classpath
 
@@ -85,6 +95,10 @@ select count($TOPIC) from
         }
 
         hash
+      end
+
+      def extract_query_projection(query)
+        self.class.extract_query_projection(query)
       end
 
       private
