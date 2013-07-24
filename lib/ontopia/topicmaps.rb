@@ -70,6 +70,10 @@ module Ontopia
         Topicmap.new(file).query(*args, &block)
       end
 
+      def query_maps(file, *args)
+        Topicmap.new(file).query_maps(*args)
+      end
+
       def topics(file, *args)
         Topicmap.new(file).topics(*args)
       end
