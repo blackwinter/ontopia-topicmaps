@@ -50,16 +50,12 @@ module Ontopia
         @default_stringifier ||= name_stringifier
       end
 
-      def name_stringifier
-        self::TopicStringifiers.get_default_stringifier
-      end
-
-      def id_stringifier
-        IdStringifier.new
-      end
-
       def stringifier(str)
-        str.is_a?(Symbol) ? send("#{str}_stringifier") : str
+        case str
+          when self::StringifierIF then str.method(:to_string)
+          when Symbol              then send("#{str}_stringifier")
+          else                          str
+        end
       end
 
       def count(file, *args)
@@ -107,9 +103,27 @@ module Ontopia
         klass ? Topicmaps.init[klass] = [modules, block] : @init
       end
 
+      def define_stringifier(name)
+        define_singleton_method(attr = "#{name}_stringifier") {
+          singleton_class.send(:attr_reader, attr)
+          instance_variable_set("@#{attr}", stringifier(yield))
+        }
+      end
+
+      def register_stringifier(klass, name)
+        init(klass, :StringifierIF) {
+          Topicmaps.define_stringifier(name) { new }
+          yield if block_given?
+        }
+      end
+
     end
 
-    init(self)
+    init(self) {
+      define_stringifier(:topic) {
+        self::TopicStringifiers.get_default_stringifier
+      }
+    }
 
   end
 end

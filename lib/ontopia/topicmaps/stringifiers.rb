@@ -28,12 +28,37 @@ module Ontopia
 
       NO_VALUE = '[No ID]'.freeze
 
-      Topicmaps.init(self, :StringifierIF) {
+      Topicmaps.register_stringifier(self, :id) {
         URIFragmentLocator.field_accessor :fragment
       }
 
       def to_string(object)
-        (id = object.get_item_identifiers.first) ? id.fragment : NO_VALUE
+        case object
+          when TopicIF            then to_string(object.get_item_identifiers.first)
+          when TypedIF            then to_string(object.get_type)
+          when URIFragmentLocator then object.fragment
+          else                         NO_VALUE
+        end
+      end
+
+    end
+
+    class AnyNameStringifier
+
+      NO_VALUE = '[No Name]'.freeze
+
+      Topicmaps.register_stringifier(self, :name)
+
+      def initialize
+        @topic_str = Topicmaps.topic_stringifier
+      end
+
+      def to_string(object)
+        case object
+          when TopicIF then @topic_str[object]
+          when TypedIF then to_string(object.get_type)
+          else              NO_VALUE
+        end
       end
 
     end

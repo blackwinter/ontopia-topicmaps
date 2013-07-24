@@ -80,7 +80,7 @@ select count($TOPIC) from
         str = Topicmaps.stringifier(str || :default)
 
         query_for_list(query, declarations, &block_given? ?
-          lambda { |i,| yield(i, str) } : lambda { |i,| str.to_string(i) }).to_a
+          lambda { |i,| yield(i, str) } : lambda { |i,| str[i] }).to_a
       end
 
       def query_maps(query = nil, declarations = nil)
@@ -91,7 +91,7 @@ select count($TOPIC) from
         hash, key_str = {}, Topicmaps.stringifier(key_str || :id)
 
         query(:all_topics, nil, value_str) { |i, str|
-          hash[key_str.to_string(i)] = str.to_string(i)
+          hash[key_str[i]] = str[i]
         }
 
         hash

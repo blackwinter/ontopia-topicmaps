@@ -28,6 +28,7 @@ module Ontopia
 
       PACKAGES = {
         'net.ontopia.infoset.impl.basic'    => %w[URIFragmentLocator],
+        'net.ontopia.topicmaps.core'        => %w[TopicIF TypedIF],
         'net.ontopia.topicmaps.query.utils' => %w[QueryWrapper RowMapperIF],
         'net.ontopia.topicmaps.utils'       => %w[TopicStringifiers],
         'net.ontopia.topicmaps.utils.ctm'   => %w[CTMTopicMapReader],
