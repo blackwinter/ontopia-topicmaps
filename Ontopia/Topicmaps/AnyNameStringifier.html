@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>class Ontopia::Topicmaps::IdStringifier - ontopia-topicmaps Application documentation (v0.0.2)</title>
+<title>class Ontopia::Topicmaps::AnyNameStringifier - ontopia-topicmaps Application documentation (v0.0.2)</title>
 
 <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
 
@@ -73,6 +73,8 @@
 
   <ul class="link-list">
     
+    <li ><a href="#method-c-new">::new</a>
+    
     <li ><a href="#method-i-to_string">#to_string</a>
     
   </ul>
@@ -123,7 +125,7 @@
 </nav>
 
 <div id="documentation">
-  <h1 class="class">class Ontopia::Topicmaps::IdStringifier</h1>
+  <h1 class="class">class Ontopia::Topicmaps::AnyNameStringifier</h1>
 
   <div id="description" class="description">
     
@@ -156,6 +158,45 @@
 
     <!-- Methods -->
     
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/stringifiers.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@topic_str</span> = <span class="ruby-constant">Topicmaps</span>.<span class="ruby-identifier">topic_stringifier</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
      <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
       <h3 class="section-header">Public Instance Methods</h3>
 
@@ -179,13 +220,12 @@
 
           
           <div class="method-source-code" id="to_string-source">
-            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/stringifiers.rb, line 35</span>
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/stringifiers.rb, line 56</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">to_string</span>(<span class="ruby-identifier">object</span>)
   <span class="ruby-keyword">case</span> <span class="ruby-identifier">object</span>
-    <span class="ruby-keyword">when</span> <span class="ruby-constant">TopicIF</span>            <span class="ruby-keyword">then</span> <span class="ruby-identifier">to_string</span>(<span class="ruby-identifier">object</span>.<span class="ruby-identifier">get_item_identifiers</span>.<span class="ruby-identifier">first</span>)
-    <span class="ruby-keyword">when</span> <span class="ruby-constant">TypedIF</span>            <span class="ruby-keyword">then</span> <span class="ruby-identifier">to_string</span>(<span class="ruby-identifier">object</span>.<span class="ruby-identifier">get_type</span>)
-    <span class="ruby-keyword">when</span> <span class="ruby-constant">URIFragmentLocator</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">object</span>.<span class="ruby-identifier">fragment</span>
-    <span class="ruby-keyword">else</span>                         <span class="ruby-constant">NO_VALUE</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">TopicIF</span> <span class="ruby-keyword">then</span> <span class="ruby-ivar">@topic_str</span>[<span class="ruby-identifier">object</span>]
+    <span class="ruby-keyword">when</span> <span class="ruby-constant">TypedIF</span> <span class="ruby-keyword">then</span> <span class="ruby-identifier">to_string</span>(<span class="ruby-identifier">object</span>.<span class="ruby-identifier">get_type</span>)
+    <span class="ruby-keyword">else</span>              <span class="ruby-constant">NO_VALUE</span>
   <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
           </div><!-- to_string-source -->

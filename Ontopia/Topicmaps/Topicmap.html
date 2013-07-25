@@ -1,454 +1,614 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+
+<html>
 <head>
-  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-  <title>Class: Ontopia::Topicmaps::Topicmap</title>
+<title>class Ontopia::Topicmaps::Topicmap - ontopia-topicmaps Application documentation (v0.0.2)</title>
 
-  <link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
 
-  <script src="../../js/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../../js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../../js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
-  <script src="../../js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
 
-</head>
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
 <body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
 
-  <div id="metadata">
-    <div id="home-metadata">
-      <div id="home-section" class="section">
-        <h3 class="section-header">
-          <a href="../../index.html">Home</a>
-          <a href="../../index.html#classes">Classes</a>
-          <a href="../../index.html#methods">Methods</a>
-        </h3>
-      </div>
-    </div>
 
-    <div id="file-metadata">
-      <div id="file-list-section" class="section">
-        <h3 class="section-header">In Files</h3>
-        <div class="section-body">
-          <ul>
-          
-            <li><a href="../../lib/ontopia/topicmaps/topicmap_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-              class="thickbox" title="lib/ontopia/topicmaps/topicmap.rb">lib/ontopia/topicmaps/topicmap.rb</a></li>
-          
-          </ul>
-        </div>
-      </div>
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
 
-      
-    </div>
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
 
-    <div id="class-metadata">
-      
-      <!-- Parent Class -->
-      <div id="parent-class-section" class="section">
-        <h3 class="section-header">Parent</h3>
-        
-        <p class="link">Object</p>
-        
-      </div>
-      
 
-      
+  
 
-      
-      <!-- Namespace Contents -->
-      <div id="namespace-list-section" class="section">
-        <h3 class="section-header">Namespace</h3>
-        <ul class="link-list">
-          
-          <li><span class="type">CLASS</span> <a href="Topicmap/RowMapper.html">Ontopia::Topicmaps::Topicmap::RowMapper</a></li>
-          
-        </ul>
-      </div>
-      
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/ontopia/topicmaps/topicmap.rb
+  </ul>
+</nav>
 
-      
-      <!-- Method Quickref -->
-      <div id="method-list-section" class="section">
-        <h3 class="section-header">Methods</h3>
-        <ul class="link-list">
-          
-          <li><a href="#method-c-new">::new</a></li>
-          
-          <li><a href="#method-i-count">#count</a></li>
-          
-          <li><a href="#method-i-query">#query</a></li>
-          
-          <li><a href="#method-i-query_for_list">#query_for_list</a></li>
-          
-          <li><a href="#method-i-read">#read</a></li>
-          
-          <li><a href="#method-i-topics">#topics</a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-    </div>
-
-    <div id="project-metadata">
-      
-      
-      <div id="fileindex-section" class="section project-section">
-        <h3 class="section-header">Files</h3>
-        <ul>
-        
-          <li class="file"><a href="../../COPYING.html">COPYING</a></li>
-        
-          <li class="file"><a href="../../ChangeLog.html">ChangeLog</a></li>
-        
-          <li class="file"><a href="../../README.html">README</a></li>
-        
-        </ul>
-      </div>
-      
-
-      <div id="classindex-section" class="section project-section">
-        <h3 class="section-header">Class/Module Index
-          <span class="search-toggle"><img src="../../images/find.png"
-            height="16" width="16" alt="[+]"
-            title="show/hide quicksearch" /></span></h3>
-        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
-        <fieldset>
-          <legend>Quicksearch</legend>
-          <input type="text" name="quicksearch" value=""
-            class="quicksearch-field" />
-        </fieldset>
-        </form>
-
-        <ul class="link-list">
-        
-          <li><a href="../../Ontopia.html">Ontopia</a></li>
-        
-          <li><a href="../../Ontopia/Topicmaps.html">Ontopia::Topicmaps</a></li>
-        
-          <li><a href="../../Ontopia/Topicmaps/IdStringifier.html">Ontopia::Topicmaps::IdStringifier</a></li>
-        
-          <li><a href="../../Ontopia/Topicmaps/Packages.html">Ontopia::Topicmaps::Packages</a></li>
-        
-          <li><a href="../../Ontopia/Topicmaps/Topicmap.html">Ontopia::Topicmaps::Topicmap</a></li>
-        
-          <li><a href="../../Ontopia/Topicmaps/Topicmap/RowMapper.html">Ontopia::Topicmaps::Topicmap::RowMapper</a></li>
-        
-          <li><a href="../../Ontopia/Topicmaps/Version.html">Ontopia::Topicmaps::Version</a></li>
-        
-        </ul>
-        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
-      </div>
-
-      
-    </div>
+    
   </div>
 
-  <div id="documentation">
-    <h1 class="class">Ontopia::Topicmaps::Topicmap</h1>
-
-    <div id="description" class="description">
-      
-    </div><!-- description -->
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Object
+  
+</nav>
 
     
     
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
     
-    <div id="5Buntitled-5D" class="documentation-section">
+    <li ><a href="#method-c-extract_query_projection">::extract_query_projection</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-count">#count</a>
+    
+    <li ><a href="#method-i-extract_query_projection">#extract_query_projection</a>
+    
+    <li ><a href="#method-i-query">#query</a>
+    
+    <li ><a href="#method-i-query_for_list">#query_for_list</a>
+    
+    <li ><a href="#method-i-query_maps">#query_maps</a>
+    
+    <li ><a href="#method-i-query_string">#query_string</a>
+    
+    <li ><a href="#method-i-query_wrapper">#query_wrapper</a>
+    
+    <li ><a href="#method-i-read">#read</a>
+    
+    <li ><a href="#method-i-topics">#topics</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../COPYING.html">COPYING</a>
+  
+    <li class="file"><a href="../../ChangeLog.html">ChangeLog</a>
+  
+    <li class="file"><a href="../../README.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Ontopia.html">Ontopia</a>
+  
+    <li><a href="../../Ontopia/Topicmaps.html">Ontopia::Topicmaps</a>
+  
+    <li><a href="../../Ontopia/Topicmaps/AnyNameStringifier.html">Ontopia::Topicmaps::AnyNameStringifier</a>
+  
+    <li><a href="../../Ontopia/Topicmaps/IdStringifier.html">Ontopia::Topicmaps::IdStringifier</a>
+  
+    <li><a href="../../Ontopia/Topicmaps/Packages.html">Ontopia::Topicmaps::Packages</a>
+  
+    <li><a href="../../Ontopia/Topicmaps/Topicmap.html">Ontopia::Topicmaps::Topicmap</a>
+  
+    <li><a href="../../Ontopia/Topicmaps/Topicmap/RowMapper.html">Ontopia::Topicmaps::Topicmap::RowMapper</a>
+  
+    <li><a href="../../Ontopia/Topicmaps/Version.html">Ontopia::Topicmaps::Version</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Ontopia::Topicmaps::Topicmap</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+    <!-- Constants -->
+    <section id="constants-list" class="section">
+      <h3 class="section-header">Constants</h3>
+      <dl>
       
+        <dt id="QUERY">QUERY
+        
+        <dd class="description">
+        
+      
+        <dt id="QUERY_PROJECTION_RE">QUERY_PROJECTION_RE
+        
+        <dd class="description">
+        
+      
+        <dt id="TOPICMAP_READER">TOPICMAP_READER
+        
+        <dd class="description">
+        
+      
+      </dl>
+    </section>
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
 
       
+      <div id="attribute-i-file" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">file</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
-      
-      <!-- Constants -->
-      <div id="constants-list" class="section">
-        <h3 class="section-header">Constants</h3>
-        <dl>
+        <div class="method-description">
         
-          <dt><a name="QUERY">QUERY</a></dt>
-          
-          <dd class="description"></dd>
-          
         
-          <dt><a name="TOPICMAP_READER">TOPICMAP_READER</a></dt>
-          
-          <dd class="description"></dd>
-          
         
-        </dl>
+        </div>
       </div>
       
+      <div id="attribute-i-tm" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">tm</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
 
-      
-      <!-- Attributes -->
-      <div id="attribute-method-details" class="method-section section">
-        <h3 class="section-header">Attributes</h3>
-
+        <div class="method-description">
         
-        <div id="file-attribute-method" class="method-detail">
-          <a name="file"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">file</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
 
-          <div class="method-description">
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-extract_query_projection" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">extract_query_projection</span><span
+            class="method-args">(query)</span>
           
+          <span class="method-click-advice">click to toggle source</span>
           
-          
-          </div>
         </div>
         
-        <div id="tm-attribute-method" class="method-detail">
-          <a name="tm"></a>
-          
-          <div class="method-heading attribute-method-heading">
-            <span class="method-name">tm</span><span
-              class="attribute-access-type">[R]</span>
-          </div>
 
-          <div class="method-description">
+        <div class="method-description">
           
           
           
-          </div>
+          
+
+          
+          <div class="method-source-code" id="extract_query_projection-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">extract_query_projection</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-identifier">projection</span> = <span class="ruby-identifier">query</span>[<span class="ruby-constant">QUERY_PROJECTION_RE</span>, <span class="ruby-value">1</span>]
+  <span class="ruby-identifier">projection</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-string">&#39;$,&#39;</span>).<span class="ruby-identifier">split</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">projection</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- extract_query_projection-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- extract_query_projection-method -->
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(file)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
         </div>
         
-      </div><!-- attribute-method-details -->
-      
 
-      <!-- Methods -->
-      
-      <div id="public-class-method-details" class="method-section section">
-        <h3 class="section-header">Public Class Methods</h3>
-
-      
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
-
+        <div class="method-description">
           
-          <div class="method-heading">
-            <span class="method-name">new</span><span
-              class="method-args">(file)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
+          
+          
           
 
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="new-source">
-<pre>
-<span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 53</span>
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 64</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">file</span>)
   <span class="ruby-constant">Topicmaps</span>.<span class="ruby-identifier">setup_classpath</span>
 
   <span class="ruby-ivar">@file</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">SEPARATOR</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">file</span> <span class="ruby-operator">:</span>
-    <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Topicmaps</span>.<span class="ruby-identifier">base</span>, <span class="ruby-string">'topicmaps'</span>, <span class="ruby-identifier">file</span>)
+    <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">Topicmaps</span>.<span class="ruby-identifier">base</span>, <span class="ruby-string">&#39;topicmaps&#39;</span>, <span class="ruby-identifier">file</span>)
 
   <span class="ruby-ivar">@tm</span> = <span class="ruby-identifier">read</span>(<span class="ruby-ivar">@file</span>)
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- new-source -->
-            
-          </div>
-
+          </div><!-- new-source -->
           
+        </div>
 
-          
-        </div><!-- new-method -->
+        
 
-      
-      </div><!-- public-class-method-details -->
+        
+      </div><!-- new-method -->
+
     
-      <div id="public-instance-method-details" class="method-section section">
-        <h3 class="section-header">Public Instance Methods</h3>
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
 
-      
-        <div id="count-method" class="method-detail ">
-          <a name="method-i-count"></a>
+    
+      <div id="method-i-count" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">count</span><span
+            class="method-args">(query = nil, declarations = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">count</span><span
-              class="method-args">(query = nil, declarations = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="count-source">
-<pre>
-<span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 64</span>
+          <div class="method-source-code" id="count-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 75</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">count</span>(<span class="ruby-identifier">query</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">declarations</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">query</span> <span class="ruby-operator">||=</span> <span class="ruby-value">:count_all_topics</span>
   <span class="ruby-identifier">query_for_list</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">declarations</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span>,<span class="ruby-operator">|</span> <span class="ruby-identifier">i</span> }.<span class="ruby-identifier">first</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- count-source -->
-            
-          </div>
+          </div><!-- count-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- count-method -->
+
+    
+      <div id="method-i-extract_query_projection" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">extract_query_projection</span><span
+            class="method-args">(query)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
           
 
           
-        </div><!-- count-method -->
+          <div class="method-source-code" id="extract_query_projection-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 101</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">extract_query_projection</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">extract_query_projection</span>(<span class="ruby-identifier">query</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- extract_query_projection-source -->
+          
+        </div>
 
-      
-        <div id="query-method" class="method-detail ">
-          <a name="method-i-query"></a>
+        
+
+        
+      </div><!-- extract_query_projection-method -->
+
+    
+      <div id="method-i-query" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">query</span><span
+            class="method-args">(query = nil, declarations = nil, str = nil) { |i, str| ... }</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">query</span><span
-              class="method-args">(query = nil, declarations = nil, str = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="query-source">
-<pre>
-<span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 69</span>
+          <div class="method-source-code" id="query-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 80</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">query</span>(<span class="ruby-identifier">query</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">declarations</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">str</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">str</span> = <span class="ruby-constant">Topicmaps</span>.<span class="ruby-identifier">stringifier</span>(<span class="ruby-identifier">str</span> <span class="ruby-operator">||</span> <span class="ruby-value">:default</span>)
-  <span class="ruby-identifier">res</span> = <span class="ruby-identifier">query_for_list</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">declarations</span>, &amp;<span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span>
-    <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span>,<span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">str</span>) } <span class="ruby-operator">:</span> <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span>,<span class="ruby-operator">|</span> <span class="ruby-identifier">str</span>.<span class="ruby-identifier">to_string</span>(<span class="ruby-identifier">i</span>) }).<span class="ruby-identifier">to_a</span>
+
+  <span class="ruby-identifier">query_for_list</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">declarations</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span>
+    <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span>,<span class="ruby-operator">|</span> <span class="ruby-keyword">yield</span>(<span class="ruby-identifier">i</span>, <span class="ruby-identifier">str</span>) } <span class="ruby-operator">:</span> <span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span>,<span class="ruby-operator">|</span> <span class="ruby-identifier">str</span>[<span class="ruby-identifier">i</span>] }).<span class="ruby-identifier">to_a</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- query-source -->
-            
-          </div>
+          </div><!-- query-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- query-method -->
+
+    
+      <div id="method-i-query_maps" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">query_maps</span><span
+            class="method-args">(query = nil, declarations = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
           
 
           
-        </div><!-- query-method -->
+          <div class="method-source-code" id="query_maps-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">query_maps</span>(<span class="ruby-identifier">query</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">declarations</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">query_wrapper</span>(<span class="ruby-identifier">declarations</span>).<span class="ruby-identifier">query_for_maps</span>(<span class="ruby-identifier">query_string</span>(<span class="ruby-identifier">query</span>)).<span class="ruby-identifier">to_a</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- query_maps-source -->
+          
+        </div>
 
-      
-        <div id="topics-method" class="method-detail ">
-          <a name="method-i-topics"></a>
+        
+
+        
+      </div><!-- query_maps-method -->
+
+    
+      <div id="method-i-topics" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">topics</span><span
+            class="method-args">(value_str = nil, key_str = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">topics</span><span
-              class="method-args">(value_str = nil, key_str = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
-
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="topics-source">
-<pre>
-<span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 75</span>
+          <div class="method-source-code" id="topics-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 91</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">topics</span>(<span class="ruby-identifier">value_str</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">key_str</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">hash</span>, <span class="ruby-identifier">key_str</span> = {}, <span class="ruby-constant">Topicmaps</span>.<span class="ruby-identifier">stringifier</span>(<span class="ruby-identifier">key_str</span> <span class="ruby-operator">||</span> <span class="ruby-value">:id</span>)
 
   <span class="ruby-identifier">query</span>(<span class="ruby-value">:all_topics</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">value_str</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">i</span>, <span class="ruby-identifier">str</span><span class="ruby-operator">|</span>
-    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key_str</span>.<span class="ruby-identifier">to_string</span>(<span class="ruby-identifier">i</span>)] = <span class="ruby-identifier">str</span>.<span class="ruby-identifier">to_string</span>(<span class="ruby-identifier">i</span>)
+    <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key_str</span>[<span class="ruby-identifier">i</span>]] = <span class="ruby-identifier">str</span>[<span class="ruby-identifier">i</span>]
   }
 
   <span class="ruby-identifier">hash</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- topics-source -->
-            
-          </div>
-
+          </div><!-- topics-source -->
           
+        </div>
 
-          
-        </div><!-- topics-method -->
+        
 
-      
-      </div><!-- public-instance-method-details -->
+        
+      </div><!-- topics-method -->
+
     
-      <div id="private-instance-method-details" class="method-section section">
-        <h3 class="section-header">Private Instance Methods</h3>
+    </section><!-- public-instance-method-details -->
+  
+     <section id="private-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Private Instance Methods</h3>
 
-      
-        <div id="query_for_list-method" class="method-detail ">
-          <a name="method-i-query_for_list"></a>
+    
+      <div id="method-i-query_for_list" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">query_for_list</span><span
+            class="method-args">(query, declarations = nil, &block)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">query_for_list</span><span
-              class="method-args">(query, declarations, &block)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
-          
+          <div class="method-source-code" id="query_for_list-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 127</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">query_for_list</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">declarations</span> = <span class="ruby-keyword">nil</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-identifier">args</span> = [<span class="ruby-identifier">query_string</span>(<span class="ruby-identifier">query</span>)]
+  <span class="ruby-identifier">args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">RowMapper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
 
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="query_for_list-source">
-<pre>
-<span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 96</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">query_for_list</span>(<span class="ruby-identifier">query</span>, <span class="ruby-identifier">declarations</span>, &amp;<span class="ruby-identifier">block</span>)
-  <span class="ruby-identifier">args</span> = [<span class="ruby-constant">QUERY</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">query</span> <span class="ruby-operator">||=</span> <span class="ruby-value">:all_topics</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">QUERY</span>[<span class="ruby-identifier">query</span>] <span class="ruby-operator">:</span>
-    <span class="ruby-identifier">query</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">raise</span>(<span class="ruby-node">&quot;No such query: #{query}&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>]
-
-  <span class="ruby-identifier">args</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">RowMapper</span>.<span class="ruby-identifier">new</span>(&amp;<span class="ruby-identifier">block</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">block</span>
-
-  <span class="ruby-identifier">qw</span> = <span class="ruby-constant">QueryWrapper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tm</span>)
-  <span class="ruby-identifier">qw</span>.<span class="ruby-identifier">set_declarations</span>(<span class="ruby-identifier">declarations</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">declarations</span>
-
-  <span class="ruby-identifier">qw</span>.<span class="ruby-identifier">query_for_list</span>(*<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">query_wrapper</span>(<span class="ruby-identifier">declarations</span>).<span class="ruby-identifier">query_for_list</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">args</span>)
 <span class="ruby-keyword">rescue</span> <span class="ruby-constant">OntopiaRuntimeException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
   <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Query error: #{err}&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- query_for_list-source -->
-            
-          </div>
+          </div><!-- query_for_list-source -->
+          
+        </div>
 
+        
+
+        
+      </div><!-- query_for_list-method -->
+
+    
+      <div id="method-i-query_string" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">query_string</span><span
+            class="method-args">(query)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
           
 
           
-        </div><!-- query_for_list-method -->
+          <div class="method-source-code" id="query_string-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 116</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">query_string</span>(<span class="ruby-identifier">query</span>)
+  <span class="ruby-constant">QUERY</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">query</span> <span class="ruby-operator">||=</span> <span class="ruby-value">:all_topics</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">QUERY</span>[<span class="ruby-identifier">query</span>] <span class="ruby-operator">:</span>
+    <span class="ruby-identifier">query</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Symbol</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">raise</span>(<span class="ruby-node">&quot;No such query: #{query}&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">query</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- query_string-source -->
+          
+        </div>
 
-      
-        <div id="read-method" class="method-detail ">
-          <a name="method-i-read"></a>
+        
+
+        
+      </div><!-- query_string-method -->
+
+    
+      <div id="method-i-query_wrapper" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">query_wrapper</span><span
+            class="method-args">(declarations = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
 
           
-          <div class="method-heading">
-            <span class="method-name">read</span><span
-              class="method-args">(file, reader = nil)</span>
-            <span class="method-click-advice">click to toggle source</span>
-          </div>
+          <div class="method-source-code" id="query_wrapper-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 121</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">query_wrapper</span>(<span class="ruby-identifier">declarations</span> = <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">qw</span> = <span class="ruby-constant">QueryWrapper</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">tm</span>)
+  <span class="ruby-identifier">qw</span>.<span class="ruby-identifier">set_declarations</span>(<span class="ruby-identifier">declarations</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">declarations</span>
+  <span class="ruby-identifier">qw</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- query_wrapper-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- query_wrapper-method -->
+
+    
+      <div id="method-i-read" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">read</span><span
+            class="method-args">(file, reader = nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
           
 
-          <div class="method-description">
-            
-            
-            
-
-            
-            <div class="method-source-code" id="read-source">
-<pre>
-<span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 87</span>
+          
+          <div class="method-source-code" id="read-source">
+            <pre><span class="ruby-comment"># File lib/ontopia/topicmaps/topicmap.rb, line 107</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">read</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">reader</span> = <span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">reader</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">TOPICMAP_READER</span>[<span class="ruby-identifier">ext</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">extname</span>(<span class="ruby-identifier">file</span>)]
   <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unsupported file format: #{ext}&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">reader</span>
@@ -457,29 +617,26 @@
 <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Java</span><span class="ruby-operator">::</span><span class="ruby-constant">JavaIo</span><span class="ruby-operator">::</span><span class="ruby-constant">IOException</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
   <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Error reading topic map: #{err}&quot;</span>
 <span class="ruby-keyword">end</span></pre>
-            </div><!-- read-source -->
-            
-          </div>
-
+          </div><!-- read-source -->
           
+        </div>
 
-          
-        </div><!-- read-method -->
+        
 
-      
-      </div><!-- private-instance-method-details -->
+        
+      </div><!-- read-method -->
+
     
-    </div><!-- 5Buntitled-5D -->
+    </section><!-- private-instance-method-details -->
   
+  </section><!-- 5Buntitled-5D -->
 
-  </div><!-- documentation -->
+</div><!-- documentation -->
 
-  <div id="validator-badges">
-    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
-    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
-      Rdoc Generator</a> 2</small>.</p>
-  </div>
 
-</body>
-</html>
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.1.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
 
