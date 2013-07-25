@@ -55,7 +55,8 @@ select count($TOPIC) from
       class << self
 
         def extract_query_projection(query)
-          query[QUERY_PROJECTION_RE, 1].delete('$,').split
+          projection = query[QUERY_PROJECTION_RE, 1]
+          projection.delete('$,').split if projection
         end
 
       end
