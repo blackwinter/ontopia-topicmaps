@@ -2,6 +2,12 @@
 
 = Revision history for ontopia-topicmaps
 
+== 0.0.2 [2013-07-25]
+
+* Added Ontopia::Topicmaps::Topicmap#query_maps.
+* Added Ontopia::Topicmaps::Topicmap#extract_query_projection.
+* Changed stringifier usage (breaking backwards-compatibility).
+
 == 0.0.1 [2013-07-19]
 
 * Birthday :-)
