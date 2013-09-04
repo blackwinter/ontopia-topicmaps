@@ -10,8 +10,8 @@ This documentation refers to ontopia-topicmaps version 0.0.2
 Query topic maps with Ontopia[http://ontopia.net/]. A working
 installation[http://ontopia.net/doc/current/install.html] of Ontopia needs to
 be present (point to it through the +OTM_BASE+ environment variable in case it
-cannot be found automatically). Note, though, that's it not required to run the
-application server, only the JAR files are needed.
+cannot be found automatically). Note, though, that it's not required to run the
+Ontopia application server, only the JAR files are needed.
 
 
 == SUPPORTED PLATFORMS
