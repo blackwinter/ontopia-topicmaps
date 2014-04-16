@@ -22,6 +22,7 @@
 #++
 
 module Ontopia
+
   module Topicmaps
 
     module Packages
@@ -47,4 +48,5 @@ module Ontopia
     end
 
   end
+
 end

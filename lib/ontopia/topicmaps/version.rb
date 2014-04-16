@@ -22,6 +22,7 @@
 #++
 
 module Ontopia
+
   module Topicmaps
 
     module Version
@@ -49,4 +50,5 @@ module Ontopia
     VERSION = Version.to_s
 
   end
+
 end

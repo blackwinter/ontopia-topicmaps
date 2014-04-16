@@ -3,7 +3,7 @@
 #                                                                             #
 # ontopia-topicmaps -- Query topic maps with Ontopia.                         #
 #                                                                             #
-# Copyright (C) 2013 Jens Wille                                               #
+# Copyright (C) 2013-2014 Jens Wille                                          #
 #                                                                             #
 # ontopia-topicmaps is free software: you can redistribute it and/or modify   #
 # it under the terms of the GNU Affero General Public License as published    #
@@ -22,6 +22,7 @@
 #++
 
 module Ontopia
+
   module Topicmaps
 
     class Topicmap
@@ -102,6 +103,10 @@ select count($TOPIC) from
         self.class.extract_query_projection(query)
       end
 
+      def extract_query_variables(query)
+        query_wrapper.get_query_processor.parse(query).get_selected_variables.to_a
+      end
+
       private
 
       def read(file, reader = nil)
@@ -114,7 +119,7 @@ select count($TOPIC) from
       end
 
       def query_string(query)
-        QUERY.has_key?(query ||= :all_topics) ? QUERY[query] :
+        QUERY.key?(query ||= :all_topics) ? QUERY[query] :
           query.is_a?(Symbol) ? raise("No such query: #{query}") : query
       end
 
@@ -150,4 +155,5 @@ select count($TOPIC) from
     end
 
   end
+
 end

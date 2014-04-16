@@ -22,6 +22,7 @@
 #++
 
 module Ontopia
+
   module Topicmaps
 
     class IdStringifier
@@ -64,4 +65,5 @@ module Ontopia
     end
 
   end
+
 end
