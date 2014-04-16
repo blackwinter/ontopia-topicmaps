@@ -3,7 +3,7 @@
 #                                                                             #
 # ontopia-topicmaps -- Query topic maps with Ontopia.                         #
 #                                                                             #
-# Copyright (C) 2013 Jens Wille                                               #
+# Copyright (C) 2013-2014 Jens Wille                                          #
 #                                                                             #
 # ontopia-topicmaps is free software: you can redistribute it and/or modify   #
 # it under the terms of the GNU Affero General Public License as published    #
@@ -27,6 +27,7 @@ require_relative 'topicmaps/version'
 require_relative 'topicmaps/packages'
 
 module Ontopia
+
   module Topicmaps
 
     DEFAULT_JARS = ENV['OTM_JARS'] || 'log4j-*:slf4j-log4j*:ontopia-engine-*'
@@ -58,20 +59,24 @@ module Ontopia
         end
       end
 
+      def file(file)
+        Topicmap.new(file)
+      end
+
       def count(file, *args)
-        Topicmap.new(file).count(*args)
+        file(file).count(*args)
       end
 
       def query(file, *args, &block)
-        Topicmap.new(file).query(*args, &block)
+        file(file).query(*args, &block)
       end
 
       def query_maps(file, *args)
-        Topicmap.new(file).query_maps(*args)
+        file(file).query_maps(*args)
       end
 
       def topics(file, *args)
-        Topicmap.new(file).topics(*args)
+        file(file).topics(*args)
       end
 
       def base=(base)
@@ -126,6 +131,7 @@ module Ontopia
     }
 
   end
+
 end
 
 require_relative 'topicmaps/stringifiers'
