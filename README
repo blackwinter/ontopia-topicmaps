@@ -2,7 +2,7 @@
 
 == VERSION
 
-This documentation refers to ontopia-topicmaps version 0.0.2
+This documentation refers to ontopia-topicmaps version 0.0.3
 
 
 == DESCRIPTION
@@ -17,7 +17,7 @@ Ontopia application server, only the JAR files are needed.
 == SUPPORTED PLATFORMS
 
 Ontopia::Topicmaps requires JRuby[http://jruby.org]. It has been tested with
-jruby 1.7.4 (1.9.3p392) on OpenJDK 64-Bit Server VM 1.6.0_27-b27 [linux-amd64].
+jruby 1.7.4 (1.9.3p392) on OpenJDK 64-Bit Server VM 1.6.0_45-b06 [linux-amd64].
 
 
 == LINKS
@@ -36,7 +36,7 @@ Demo::          http://ixtrieve.fh-koeln.de/ghn
 
 == LICENSE AND COPYRIGHT
 
-Copyright (C) 2013 Jens Wille
+Copyright (C) 2013-2014 Jens Wille
 
 ontopia-topicmaps is free software: you can redistribute it and/or modify it
 under the terms of the GNU Affero General Public License as published by

@@ -2,6 +2,12 @@
 
 = Revision history for ontopia-topicmaps
 
+== 0.0.3 [2014-04-16]
+
+* Added Ontopia::Topicmaps::Topicmap#extract_query_variables.
+* Added Ontopia::Topicmaps.file.
+* Housekeeping.
+
 == 0.0.2 [2013-07-25]
 
 * Added Ontopia::Topicmaps::Topicmap#query_maps.
