@@ -26,7 +26,7 @@ Ontopia versions 5.2.2 and 5.3.0 are known to work with Ontopia::Topicmaps.
 
 Ontopia::       http://ontopia.net/
 Demo::          http://ixtrieve.fh-koeln.de/ghn
-Documentation:: https://blackwinter.github.io/ontopia-topicmaps/
+Documentation:: https://blackwinter.github.com/ontopia-topicmaps
 Source code::   https://github.com/blackwinter/ontopia-topicmaps
 RubyGem::       https://rubygems.org/gems/ontopia-topicmaps
 Travis CI::     https://travis-ci.org/blackwinter/ontopia-topicmaps
