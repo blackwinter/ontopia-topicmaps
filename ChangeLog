@@ -2,6 +2,10 @@
 
 = Revision history for ontopia-topicmaps
 
+== 0.0.4 [2015-07-29]
+
+* JRuby 9000 compatibility.
+
 == 0.0.3 [2014-04-16]
 
 * Added Ontopia::Topicmaps::Topicmap#extract_query_variables.

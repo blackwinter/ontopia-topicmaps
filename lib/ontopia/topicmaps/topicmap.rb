@@ -39,12 +39,12 @@ module Ontopia
       }
 
       QUERY = {
-        :all_topics => <<-EOT,
+        all_topics: <<-EOT,
 select $TOPIC from
   topic($TOPIC),
   item-identifier($TOPIC, $_)?
         EOT
-        :count_all_topics => <<-EOT
+        count_all_topics: <<-EOT
 select count($TOPIC) from
   topic($TOPIC),
   item-identifier($TOPIC, $_)?

@@ -3,7 +3,7 @@
 #                                                                             #
 # ontopia-topicmaps -- Query topic maps with Ontopia.                         #
 #                                                                             #
-# Copyright (C) 2013-2014 Jens Wille                                          #
+# Copyright (C) 2013-2015 Jens Wille                                          #
 #                                                                             #
 # ontopia-topicmaps is free software: you can redistribute it and/or modify   #
 # it under the terms of the GNU Affero General Public License as published    #
@@ -29,7 +29,7 @@ module Ontopia
 
       MAJOR = 0
       MINOR = 0
-      TINY  = 3
+      TINY  = 4
 
       class << self
 

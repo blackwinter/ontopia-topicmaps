@@ -2,7 +2,7 @@
 
 == VERSION
 
-This documentation refers to ontopia-topicmaps version 0.0.3
+This documentation refers to ontopia-topicmaps version 0.0.4
 
 
 == DESCRIPTION
@@ -17,7 +17,9 @@ Ontopia application server, only the JAR files are needed.
 == SUPPORTED PLATFORMS
 
 Ontopia::Topicmaps requires JRuby[http://jruby.org]. It has been tested with
-jruby 1.7.4 (1.9.3p392) on OpenJDK 64-Bit Server VM 1.6.0_45-b06 [linux-amd64].
+jruby 1.7.12 (1.9.3p392) on Java HotSpot(TM) 64-Bit Server VM 1.8.0_45-b14
+[linux-amd64] and jruby 9.0.0.0 (2.2.2) on OpenJDK 64-Bit Server VM 24.79-b02
+1.7.0_79-b14 [linux-amd64].
 
 Ontopia versions 5.2.2 and 5.3.0 are known to work with Ontopia::Topicmaps.
 
@@ -39,7 +41,7 @@ Travis CI::     https://travis-ci.org/blackwinter/ontopia-topicmaps
 
 == LICENSE AND COPYRIGHT
 
-Copyright (C) 2013-2014 Jens Wille
+Copyright (C) 2013-2015 Jens Wille
 
 ontopia-topicmaps is free software: you can redistribute it and/or modify it
 under the terms of the GNU Affero General Public License as published by
