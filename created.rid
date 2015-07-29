@@ -1,10 +1,10 @@
-Wed, 16 Apr 2014 13:37:05 +0200
-README	Wed, 16 Apr 2014 13:02:36 +0200
+Wed, 29 Jul 2015 13:16:49 +0200
+README	Wed, 29 Jul 2015 13:14:34 +0200
 COPYING	Fri, 19 Jul 2013 13:21:35 +0200
-ChangeLog	Wed, 16 Apr 2014 13:34:33 +0200
+ChangeLog	Wed, 29 Jul 2015 13:07:26 +0200
 lib/ontopia-topicmaps.rb	Fri, 19 Jul 2013 13:31:20 +0200
 lib/ontopia/topicmaps.rb	Wed, 16 Apr 2014 12:58:10 +0200
-lib/ontopia/topicmaps/version.rb	Wed, 16 Apr 2014 13:02:50 +0200
+lib/ontopia/topicmaps/version.rb	Wed, 29 Jul 2015 13:08:00 +0200
 lib/ontopia/topicmaps/packages.rb	Thu, 27 Mar 2014 17:05:35 +0100
-lib/ontopia/topicmaps/topicmap.rb	Wed, 16 Apr 2014 12:58:01 +0200
+lib/ontopia/topicmaps/topicmap.rb	Wed, 29 Jul 2015 13:15:33 +0200
 lib/ontopia/topicmaps/stringifiers.rb	Thu, 27 Mar 2014 17:05:41 +0100

@@ -4,21 +4,18 @@
 <head>
 <meta charset="UTF-8">
 
-<title>ontopia-topicmaps Application documentation (v0.0.3)</title>
-
-<link href="./fonts.css" rel="stylesheet">
-<link href="./rdoc.css" rel="stylesheet">
+<title>ontopia-topicmaps Application documentation (v0.0.4)</title>
 
 <script type="text/javascript">
   var rdoc_rel_prefix = "./";
 </script>
 
 <script src="./js/jquery.js"></script>
-<script src="./js/navigation.js"></script>
-<script src="./js/search_index.js"></script>
-<script src="./js/search.js"></script>
-<script src="./js/searcher.js"></script>
 <script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
 
 
 <body id="top" role="document" class="file">
@@ -99,13 +96,13 @@
 <main role="main">
 
 
-<h1 id="label-ontopia-topicmaps+-+Query+topic+maps+with+Ontopia">ontopia-topicmaps - Query topic maps with <a href="Ontopia.html">Ontopia</a><span><a href="#label-ontopia-topicmaps+-+Query+topic+maps+with+Ontopia">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+<h1 id="label-ontopia-topicmaps+-+Query+topic+maps+with+Ontopia">ontopia-topicmaps - Query topic maps with <a href="Ontopia.html">Ontopia</a><span><a href="#label-ontopia-topicmaps+-+Query+topic+maps+with+Ontopia">&para;</a> <a href="#top">&uarr;</a></span></h1>
 
-<h2 id="label-VERSION">VERSION<span><a href="#label-VERSION">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<h2 id="label-VERSION">VERSION<span><a href="#label-VERSION">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<p>This documentation refers to ontopia-topicmaps version 0.0.3</p>
+<p>This documentation refers to ontopia-topicmaps version 0.0.4</p>
 
-<h2 id="label-DESCRIPTION">DESCRIPTION<span><a href="#label-DESCRIPTION">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<h2 id="label-DESCRIPTION">DESCRIPTION<span><a href="#label-DESCRIPTION">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
 <p>Query topic maps with <a href="http://ontopia.net/">Ontopia</a>. A working
 <a href="http://ontopia.net/doc/current/install.html">installation</a> of
@@ -115,17 +112,32 @@ automatically). Note, though, that it&#39;s not required to run the <a
 href="Ontopia.html">Ontopia</a> application server, only the JAR files are
 needed.</p>
 
-<h2 id="label-SUPPORTED+PLATFORMS">SUPPORTED PLATFORMS<span><a href="#label-SUPPORTED+PLATFORMS">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<h2 id="label-SUPPORTED+PLATFORMS">SUPPORTED PLATFORMS<span><a href="#label-SUPPORTED+PLATFORMS">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
 <p><a href="Ontopia/Topicmaps.html">Ontopia::Topicmaps</a> requires <a
-href="http://jruby.org">JRuby</a>. It has been tested with jruby 1.7.4
-(1.9.3p392) on OpenJDK 64-Bit Server VM 1.6.0_45-b06 [linux-amd64].</p>
+href="http://jruby.org">JRuby</a>. It has been tested with jruby 1.7.12
+(1.9.3p392) on Java HotSpot(TM) 64-Bit Server VM 1.8.0_45-b14</p>
+<dl class="rdoc-list label-list"><dt>linux-amd64
+<dd>
+<p>and jruby 9.0.0.0 (2.2.2) on OpenJDK 64-Bit Server VM 24.79-b02</p>
+</dd></dl>
 
-<h2 id="label-LINKS">LINKS<span><a href="#label-LINKS">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
-<dl class="rdoc-list note-list"><dt>Documentation
+<p>1.7.0_79-b14 [linux-amd64].</p>
+
+<p><a href="Ontopia.html">Ontopia</a> versions 5.2.2 and 5.3.0 are known to
+work with <a href="Ontopia/Topicmaps.html">Ontopia::Topicmaps</a>.</p>
+
+<h2 id="label-LINKS">LINKS<span><a href="#label-LINKS">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<dl class="rdoc-list note-list"><dt><a href="Ontopia.html">Ontopia</a>
+<dd>
+<p><a href="http://ontopia.net">ontopia.net</a>/</p>
+</dd><dt>Demo
+<dd>
+<p><a href="http://ixtrieve.fh-koeln.de/ghn">ixtrieve.fh-koeln.de/ghn</a></p>
+</dd><dt>Documentation
 <dd>
 <p><a
-href="https://blackwinter.github.io/ontopia-topicmaps">blackwinter.github.io/ontopia-topicmaps</a>/</p>
+href="https://blackwinter.github.com/ontopia-topicmaps">blackwinter.github.com/ontopia-topicmaps</a></p>
 </dd><dt>Source code
 <dd>
 <p><a
@@ -134,23 +146,21 @@ href="https://github.com/blackwinter/ontopia-topicmaps">github.com/blackwinter/o
 <dd>
 <p><a
 href="https://rubygems.org/gems/ontopia-topicmaps">rubygems.org/gems/ontopia-topicmaps</a></p>
-</dd><dt><a href="Ontopia.html">Ontopia</a>
+</dd><dt>Travis CI
 <dd>
-<p><a href="http://ontopia.net">ontopia.net</a>/</p>
-</dd><dt>Demo
-<dd>
-<p><a href="http://ixtrieve.fh-koeln.de/ghn">ixtrieve.fh-koeln.de/ghn</a></p>
+<p><a
+href="https://travis-ci.org/blackwinter/ontopia-topicmaps">travis-ci.org/blackwinter/ontopia-topicmaps</a></p>
 </dd></dl>
 
-<h2 id="label-AUTHORS">AUTHORS<span><a href="#label-AUTHORS">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<h2 id="label-AUTHORS">AUTHORS<span><a href="#label-AUTHORS">&para;</a> <a href="#top">&uarr;</a></span></h2>
 <ul><li>
 <p>Jens Wille &lt;<a
 href="mailto:jens.wille@gmail.com">jens.wille@gmail.com</a>&gt;</p>
 </li></ul>
 
-<h2 id="label-LICENSE+AND+COPYRIGHT">LICENSE AND COPYRIGHT<span><a href="#label-LICENSE+AND+COPYRIGHT">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<h2 id="label-LICENSE+AND+COPYRIGHT">LICENSE AND COPYRIGHT<span><a href="#label-LICENSE+AND+COPYRIGHT">&para;</a> <a href="#top">&uarr;</a></span></h2>
 
-<p>Copyright (C) 2013-2014 Jens Wille</p>
+<p>Copyright (C) 2013-2015 Jens Wille</p>
 
 <p>ontopia-topicmaps is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
@@ -171,7 +181,7 @@ href="http://www.gnu.org/licenses">www.gnu.org/licenses</a>/&gt;.</p>
 
 <footer id="validator-badges" role="contentinfo">
   <p><a href="http://validator.w3.org/check/referer">Validate</a>
-  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.1.
-  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
 </footer>
 
