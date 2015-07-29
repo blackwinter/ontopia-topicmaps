@@ -3,7 +3,7 @@
 #                                                                             #
 # ontopia-topicmaps -- Query topic maps with Ontopia.                         #
 #                                                                             #
-# Copyright (C) 2013-2014 Jens Wille                                          #
+# Copyright (C) 2013-2015 Jens Wille                                          #
 #                                                                             #
 # ontopia-topicmaps is free software: you can redistribute it and/or modify   #
 # it under the terms of the GNU Affero General Public License as published    #
@@ -82,7 +82,7 @@ select count($TOPIC) from
         str = Topicmaps.stringifier(str || :default)
 
         query_for_list(query, declarations, &block_given? ?
-          lambda { |i,| yield(i, str) } : lambda { |i,| str[i] }).to_a
+          lambda { |i, *| yield(i, str) } : lambda { |i, *| str[i] }).to_a
       end
 
       def query_maps(query = nil, declarations = nil)
