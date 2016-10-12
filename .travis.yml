@@ -15,6 +15,7 @@ matrix:
 env:
   global:
     - OTM_BASE=/tmp/ontopia
+    - ONTOPIA_VERSION=5.3.0
 
 script:
   rake spec
@@ -24,7 +25,7 @@ install:
   - gem install --prerelease --development ontopia-topicmaps
 
 before_install:
-  - wget http://ontopia.googlecode.com/files/ontopia-5.3.0.zip -O $OTM_BASE.zip
+  - wget https://github.com/ontopia/ontopia/releases/download/release-$ONTOPIA_VERSION/ontopia-$ONTOPIA_VERSION.zip -O $OTM_BASE.zip
   - unzip $OTM_BASE.zip -d $OTM_BASE
 
 sudo:
